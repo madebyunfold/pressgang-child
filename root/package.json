@@ -8,17 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/benedict-w/pressgang.git"
+    "url": "git+https://github.com/haiodesign/pressgang-child"
   },
   "keywords": [
     "Wordpress"
   ],
   "author": "{%= author_name}",
-  "license": "GPL-2.0",
   "bugs": {
-    "url": "https://github.com/benedict-w/pressgang/issues"
+    "url": "https://github.com/haiodesign/pressgang-child"
   },
-  "homepage": "https://github.com/benedict-w/pressgang#readme",
+  "homepage": "https://haio.design/",
   "devDependencies": {
     "@fortawesome/fontawesome-free": "latest",
     "bootstrap": "latest",

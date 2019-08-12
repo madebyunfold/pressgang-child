@@ -1,14 +1,14 @@
 /*
  * grunt-init-pressgang-child
+ *
  * https://github.com/benedict-w/pressgang
  *
- * Copyright (c) 2016 Benedict Wallis, contributors
- * GNU General Public License v2 or later
+ * Copyright (c) 2019 Haio Design, contributors
  */
 
 'use strict';
 
-exports.description = 'Create a basic Wordpress childtheme for Pressgang.';
+exports.description = 'Create a basic Haio WordPress child theme for PressGang.';
 
 // template-specific notes displayed before question prompts
 exports.notes = '';
@@ -26,13 +26,13 @@ exports.template = function(grunt, init, done) {
 
         // prompt
         init.prompt('name', "pressgang-child"),
-        init.prompt('homepage', "https://github.com/benedict-w/pressgang-child"),
-        init.prompt('description', "Wordpress child theme for pressgang."),
+        init.prompt('homepage', "https://github.com/haiodesign/pressgang-child"),
+        init.prompt('description', "A Haio WordPress child theme for PressGang."),
         init.prompt('version', "1.0.0"),
-        // init.prompt('licenses', "GPL-2.0"),
-        init.prompt('author_name', "Benedict Wallis"),
-        init.prompt('author_email', "ben@benedict-wallis.com"),
-        init.prompt('author_uri', "http://www.benedict-wallis.com")
+        init.prompt('licenses', "copyright"),
+        init.prompt('author_name', "Haio"),
+        init.prompt('author_email', "hello@haio.design"),
+        init.prompt('author_uri', "https://haio.design/")
 
     ], function(err, props) {
 
@@ -40,7 +40,7 @@ exports.template = function(grunt, init, done) {
         var files = init.filesToCopy(props);
 
         // add licenses
-        // init.addLicenseFiles(files, props.licenses);
+        init.addLicenseFiles(files, props.licenses);
 
         console.log( files );
 
