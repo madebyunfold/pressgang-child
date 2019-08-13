@@ -1,5 +1,6 @@
 # A Grunt Template for setting up a PressGang ready WordPress Child Theme for Haio projects
 - Install Grunt CLI http://gruntjs.com/getting-started.
+- Install Grunt Scaffolding - https://gruntjs.com/project-scaffolding
 - Create folder for child theme in: `wp-content/themes/[pressgang-child]`
 - Init local Grunt in child theme directory with: `sudo npm install grunt --save-dev`
 - Clone this repo `git clone https://github.com/haiodesign/pressgang-child.git ~/.grunt-init/haio-child`
