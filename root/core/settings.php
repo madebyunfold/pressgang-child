@@ -208,14 +208,35 @@ return array (
      * ]
      *
      */
-    'scripts' => array(
-        'bootstrap' => array(
-            'src' => get_template_directory_uri() . '/js/min/bootstrap.min.js',
-            'deps' => array('jquery'),
-            'version' => '3.2.0',
-            'in_footer' => true
-        ),
-    ),
+    'scripts' => array(),
+    
+        /*
+     * Styles
+     *
+     * See - https://github.com/benedict-w/pressgang/blob/master/core/styles.php
+     *
+     * Array of stylesheets on $handle => $args array where $args match wp_register_script arguments see:
+     * https://developer.wordpress.org/reference/functions/wp_register_style/
+     *
+     * An additional 'hook' parameter is available to specify the the action used to enqueue the script on
+     * (default = wp_enqueue_scripts).
+     *
+     * @var array
+     *
+     * [
+     *   'key' => [
+     *      'handle' => '',
+     *      'src' => '',
+     *      'deps' => '',
+     *      'ver' => '',
+     *      'media' => 'all',
+     *      // pressgang additional params
+     *      'hook' => '',
+     *   ],...
+     * ]
+     *
+     */
+    'styles' => array(),
 
     /*
      * Custom Post Types
