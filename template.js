@@ -8,7 +8,7 @@
 
 'use strict';
 
-exports.description = 'Create a basic Haio WordPress childtheme for Pressgang.';
+exports.description = 'Create a basic Unfold WordPress childtheme for Pressgang.';
 
 // template-specific notes displayed before question prompts
 exports.notes = '';
@@ -25,14 +25,14 @@ exports.template = function(grunt, init, done) {
     init.process({}, [
 
         // prompt
-        init.prompt('name', "haio-child"),
-        init.prompt('homepage', "https://github.com/haiodesign/pressgang-child"),
-        init.prompt('description', "WordPress Haio child template for pressgang."),
+        init.prompt('name', "unfold-child"),
+        init.prompt('homepage', "https://github.com/madebyunfold/pressgang-child"),
+        init.prompt('description', "WordPress Unfold child template for Pressgang."),
         init.prompt('version', "1.0.0"),
         // init.prompt('licenses', "GPL-2.0"),
-        init.prompt('author_name', "Haio"),
-        init.prompt('author_email', "info@haio.design"),
-        init.prompt('author_uri', "https://haio.design/")
+        init.prompt('author_name', "Unfold"),
+        init.prompt('author_email', "hello@madebyunfold.co"),
+        init.prompt('author_uri', "https://madebyunfold.co/")
 
     ], function(err, props) {
 
