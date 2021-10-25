@@ -1,0 +1,58 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../../pressgang/scss/variables";
+@import "variables";
+
+body.login {
+  background: $primary;
+  h1 {
+    a {
+      max-width: 208px !important;
+    }
+  }
+  p.message,
+  #login_error {
+    background: rgba($white, 50%);
+    background-color: none;
+    color: $body-color;
+    box-shadow: none;
+    border: $border-width solid rgba($white, 75%);
+    border-radius: $border-radius;
+  }
+  #loginform {
+    background: $white;
+    background-color: none;
+    color: $body-color;
+    border: $border-width solid $border-color;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow-lg;
+    input:not([type="checkbox"]):not([type="submit"]) {
+      background: $white;
+      color: $body-color;
+      border-radius: $input-border-radius;
+      border: $border-width solid $border-color;
+    }
+    input[type="submit"] {
+      border-radius: $border-radius-pill;
+      background: $primary;
+      color: $body-color;
+      font-weight: bold;
+      padding: 4px 28px;
+      border: none;
+    }
+  }
+  #nav,
+  #nav a,
+  #backtoblog,
+  #backtoblog a,
+  .privacy-policy-page-link,
+  .privacy-policy-link {
+    color: rgba($body-color, 100%);
+    &:hover {
+      color: rgba($body-color, 75%);
+    }
+  }
+  .privacy-policy-page-link {
+    display: none;
+  }
+}

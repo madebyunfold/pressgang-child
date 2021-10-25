@@ -1,0 +1,34 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../../pressgang/scss/variables";
+@import "variables";
+
+/* Main column width */
+.wp-block {
+  max-width: 920px;
+}
+ 
+/* Width of "wide" blocks */
+.wp-block[data-align="wide"] {
+  max-width: 1280px;
+}
+ 
+/* Width of "full-wide" blocks */
+.wp-block[data-align="full"] {
+  max-width: none;
+}
+
+.wp-block-group {
+  background: $white !important;
+  border: 1px solid #adb2ad !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+}
+
+.block-editor-panel-color-gradient-settings {
+  .components-base-control.block-editor-color-gradient-control:not(:last-child) {
+    display: none !important;
+  }
+}

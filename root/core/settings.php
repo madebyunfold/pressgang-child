@@ -247,7 +247,18 @@ return array (
      * ]
      *
      */
-    'styles' => array(),
+    'styles' => array(
+        'editor' => array(
+            'src' => get_stylesheet_directory_uri() . '/css/editor-styles.css',
+            'hook' => 'enqueue_block_editor_assets',
+            'ver' => '1.0',
+        ),
+        'admin' => array(
+            'src' => get_stylesheet_directory_uri() . '/css/admin-styles.css',
+            'hook' => 'login_enqueue_scripts',
+            'ver' => '1.0',
+        ),
+    ),
 
     /*
      * Custom Post Types
