@@ -9,7 +9,9 @@ module.exports = function(grunt) {
         sass: {
             dist: {
                 files: {
-                    "css/styles.css": "scss/styles.scss"
+                    "css/styles.css": "scss/styles.scss",
+                    "css/editor-styles.css": "scss/editor-styles.scss",
+                    "css/admin-styles.css": "scss/admin-styles.scss",
                 }
             }
         },
@@ -40,10 +42,7 @@ module.exports = function(grunt) {
             my_target: {
                 options: {
                     whitelist: [
-                        ...require("purgecss-with-wordpress").whitelist,
-                    ],
-                    whitelistPatterns: [
-                        ...require("purgecss-with-wordpress").whitelistPatterns,
+                        ...require("purgecss-with-wordpress").safelist
                     ],
                     content: [
                         '../pressgang/views/**/*.twig',
@@ -80,7 +79,9 @@ module.exports = function(grunt) {
                 separator: ';'
             },
             dist: {
-                src: ['js/src/**/*.js'],
+                src: [
+                  'js/src/**/*.js'
+                ],
                 dest: 'js/dist/<%= pkg.name %>.js'
             }
         },
@@ -156,29 +157,64 @@ module.exports = function(grunt) {
         },
 
         /*
-         * https://github.com/sapegin/grunt-webfont
-         */
+        * https://github.com/jkphl/grunt-svg-sprite
+        *
+        */
+        svg_sprite: {
+          complex: {
+            expand: true,
+            cwd: "svg/src/sprites",
+            src: ["**/*.svg"],
+            dest: "svg/dist",
+            options: {
+              shape: {
+                dimension: {
+                  maxWidth: 64,
+                  maxHeight: 64,
+                },
+                spacing: {
+                  padding: 0,
+                },
+                dest: "out",
+              },
+              mode: {
+                view: {
+                  bust: false,
+                  render: {
+                    scss: true,
+                  },
+                },
+                symbol: true,
+              },
+            },
+          },
+        },
+
+        /*
+        * https://github.com/sapegin/grunt-webfont
+        */
         webfont: {
-            icons: {
-                src: 'svg/src/icons/*.svg',
-                dest: 'fonts',
-                destCss: 'scss',
-                options: {
-                    fontFamilyName: '<%= pkg.name %> Icons',
-                    engine: 'node',
-                    syntax: 'bootstrap',
-                    fontFilename: 'pt-icons',
-                    stylesheets: ['scss'],
-                    htmlDemo: false,
-                    optimize: false,
-                    normalize: true,
-                    ligatures: false,
-                    templateOptions: {
-                        baseClass: 'pt-icon',
-                        classPrefix: 'pt-icon-'
-                    }
-                }
-            }
+          icons: {
+            src: "svg/src/icons/*.svg",
+            dest: "fonts",
+            destCss: "scss",
+            options: {
+              fontFamilyName: "<%= pkg.name %> Icons",
+              engine: "node",
+              syntax: "bootstrap",
+              fontFilename: "<%= pkg.name %>-icons",
+              stylesheets: ["scss"],
+              htmlDemo: false,
+              optimize: false,
+              normalize: true,
+              ligatures: false,
+              template: "svg/icons-template.css",
+              templateOptions: {
+                baseClass: "<%= pkg.name %>-icon",
+                classPrefix: "<%= pkg.name %>-icon-",
+              },
+            },
+          },
         },
 
         /*
