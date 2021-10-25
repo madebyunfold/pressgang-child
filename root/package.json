@@ -26,7 +26,7 @@
     "@fortawesome/fontawesome-free": "latest",
     "bootstrap": "latest",
     "lazysizes": "latest",
-    "autoprefixer": "latest",
+    "autoprefixer": "^9.8.6",
     "grunt": "latest",
     "grunt-contrib-clean": "latest",
     "grunt-contrib-compress": "latest",
@@ -34,12 +34,14 @@
     "grunt-contrib-cssmin": "latest",
     "grunt-contrib-sass": "latest",
     "grunt-contrib-uglify": "latest",
+    "grunt-contrib-uglify-es": "latest",
     "grunt-contrib-watch": "latest",
     "grunt-postcss": "latest",
     "grunt-purgecss": "latest",
-    "purgecss-with-wordpress": "latest",
     "grunt-svgmin": "latest",
+    "grunt-svg-sprite": "latest",
     "grunt-webfont": "latest",
+    "purgecss-with-wordpress": "latest",
     "browserslist": "latest"
   }
 }
