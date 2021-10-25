@@ -1,0 +1,42 @@
+// String interpolation to convert the color to a string (URL encoded form of #)
+@function url-friendly-color($color) {
+  @return '%23' + str-slice('#{$color}', 2, -1);
+}
+
+
+// Branded Scrollbar
+@mixin branded-scrollbar($color, $bg, $size: $branded-scrollbar-size) {
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+  &::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $color;
+    border: 0px none $bg;
+    border-radius: 50px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: darken($color, 10%);
+  }
+  &::-webkit-scrollbar-thumb:active {
+    background: darken($color, 15%);
+  }
+  &::-webkit-scrollbar-track {
+    background: $bg;
+    border: 0px none $bg;
+    border-radius: 50px;
+  }
+  &::-webkit-scrollbar-track:hover {
+    background: $bg;
+  }
+  &::-webkit-scrollbar-track:active {
+    background: $bg;
+  }
+  &::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+}

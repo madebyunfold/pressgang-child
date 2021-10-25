@@ -1,0 +1,52 @@
+// Center elements horizontally
+@mixin push-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+// Resets child elements vertically or horizontally
+// e.g. @include reset-child-spacing(vertical);
+@mixin reset-child-spacing($axis: "vertical") {
+  @if $axis == "horizontal" {
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  @else if $axis == "vertical" {
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+// Resets last child element vertically or horizontally
+// e.g. @include reset-child-spacing(vertical);
+@mixin reset-last-child-spacing($axis: "vertical") {
+  @if $axis == "horizontal" {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  @else if $axis == "vertical" {
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+
+// Border radius with overflow bug fix for safari
+@mixin overflow-border-radius($radius: $border-radius) {
+  overflow: hidden;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  border-radius: $radius;
+}
