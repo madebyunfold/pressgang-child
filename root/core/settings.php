@@ -29,14 +29,15 @@ return array (
      */
     'inc' => array(
         'admin-logo',
+        'logo-svg',
         'customizer',
         'emojicons',
         'filters',
         'gallery',
         'google-analytics',
-        'opengraph',
         'permalinks',
         'title',
+        // 'cookie-consent',
     ),
 
     /*
@@ -174,7 +175,7 @@ return array (
      */
     'options' => array(
         array(
-            'page_title' => __("Site Options", THEMENAME),
+            'page_title' => __("Theme Options", THEMENAME),
         ),
     ),
 
