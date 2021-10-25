@@ -4,24 +4,23 @@
 @import "../../pressgang/scss/variables";
 @import "variables";
 
+
 // Bootstrap
 @import "../node_modules/bootstrap/scss/mixins";
 @import "../node_modules/bootstrap/scss/root";
 @import "../node_modules/bootstrap/scss/reboot";
 @import "../node_modules/bootstrap/scss/type";
-@import "../node_modules/bootstrap/scss/images";
-// @import "../node_modules/bootstrap/scss/code";
+// @import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
 @import "../node_modules/bootstrap/scss/grid";
-// @import "../node_modules/bootstrap/scss/tables";
 // @import "../node_modules/bootstrap/scss/forms";
 // @import "../node_modules/bootstrap/scss/buttons";
-// @import "../node_modules/bootstrap/scss/transitions";
+@import "../node_modules/bootstrap/scss/transitions";
+// @import "../node_modules/bootstrap/scss/tables";
 // @import "../node_modules/bootstrap/scss/dropdown";
 // @import "../node_modules/bootstrap/scss/button-group";
-// @import "../node_modules/bootstrap/scss/input-group";
-// @import "../node_modules/bootstrap/scss/custom-forms";
-@import "../node_modules/bootstrap/scss/nav";
-@import "../node_modules/bootstrap/scss/navbar";
+// @import "../node_modules/bootstrap/scss/nav";
+// @import "../node_modules/bootstrap/scss/navbar";
 // @import "../node_modules/bootstrap/scss/card";
 // @import "../node_modules/bootstrap/scss/breadcrumb";
 // @import "../node_modules/bootstrap/scss/pagination";
@@ -37,7 +36,8 @@
 // @import "../node_modules/bootstrap/scss/popover";
 // @import "../node_modules/bootstrap/scss/carousel";
 @import "../node_modules/bootstrap/scss/utilities";
-@import "../node_modules/bootstrap/scss/print";
+@import "../node_modules/bootstrap/scss/utilities/api";
+
 
 // FontAwesome 5.8.1
 // @import '../node_modules/@fortawesome/fontawesome-free/scss/variables';
@@ -56,9 +56,11 @@
 // @import '../node_modules/@fortawesome/fontawesome-free/scss/regular';
 // @import '../node_modules/@fortawesome/fontawesome-free/scss/solid';
 
+
 // Slick
 // @import "../../pressgang/scss/slick/slick";
 // @import "../../pressgang/scss/slick/slick-theme";
+
 
 // PressGang
 @import "../../pressgang/scss/custom/mixins";
@@ -66,10 +68,58 @@
 // @import "../../pressgang/scss/custom/social";
 // @import "../../pressgang/scss/custom/blur-up";
 
+
 // Cookie Consent
 // @import "../../pressgang/scss/custom/cookie-consent";
+
 
 // Hamburgers
 // @import "../../pressgang/scss/hamburgers/variables";
 // @import "../../pressgang/scss/hamburgers/base";
 // @import "../../pressgang/scss/hamburgers/types/slider";
+
+
+/*! purgecss start ignore */
+
+// Child Theme
+// @import "icons";
+@import "mixins";
+@import "placeholders";
+
+// WordPress Gutenberg blocks
+// @import "blocks/wp/wp-block-group";
+// @import "blocks/wp/wp-block-columns";
+// @import "blocks/wp/wp-block-separator";
+// @import "blocks/wp/wp-block-image";
+// @import "blocks/wp/wp-block-quote";
+// @import "blocks/wp/wp-block-embed";
+// @import "blocks/wp/wp-block-table";
+
+// Child Theme
+// @import "body";
+// @import "layout";
+// @import "blur-up";
+// @import "type";
+// @import "buttons";
+// @import "header";
+// @import "hero";
+// @import "footer";
+// @import "forms";
+// @import "archive";
+// @import "single";
+// @import "pagination";
+// @import "page-not-found";
+
+// Child Theme custom Gutenberg blocks
+// @import "blocks/custom/_";
+
+// Child theme Gutenberg color palette
+// @import "wp-color-palette";
+
+// Cookie Consent
+// @import "cookie-consent";
+
+// WP Admin
+// @import "wp-admin";
+
+/*! purgecss end ignore */
